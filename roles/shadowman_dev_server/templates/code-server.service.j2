@@ -1,0 +1,19 @@
+[Unit]
+Description=Code Server IDE
+After=network.target
+
+[Service]
+Type=simple
+User={{ username }}
+Restart=on-failure
+RestartSec=10
+{% if cert_location is defined %}
+ExecStart=/usr/bin/code-server --cert {{ cert_location }} --cert-key {{ key_location }}
+{% else %}
+ExecStart=/usr/bin/code-server
+{% endif %}
+ExecStop=/bin/kill -s QUIT $MAINPID
+
+
+[Install]
+WantedBy=multi-user.target

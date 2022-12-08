@@ -1,0 +1,10 @@
+---
+- name: Deploy Ansible development server
+  hosts: all
+
+  vars:
+    pah_user: "USERNAME"
+    pah_pass: "PASSWORD"
+
+  roles:
+    - shadowman_dev_server
