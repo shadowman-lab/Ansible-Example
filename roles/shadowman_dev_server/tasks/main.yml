@@ -14,7 +14,7 @@
 
 - name: Ensure certs directory exists
   ansible.builtin.file:
-    path: "/certs/"
+    path: "{{ certandkeyfolder }}"
     state: directory
     owner: root
     group: root
@@ -24,7 +24,7 @@
 - name: Copy Cert
   ansible.builtin.copy:
     src: /certs/shadowman_cert.cer
-    dest: "{{ cert_location }}"
+    dest: "{{ certandkeyfolder }}{{ cert_location }}"
     owner: root
     group: wheel
     mode: '0644'
@@ -33,7 +33,7 @@
 - name: Copy Key
   ansible.builtin.copy:
     src: /certs/shadowman_private.key
-    dest: "{{ key_location }}"
+    dest: "{{ certandkeyfolder }}{{ key_location }}"
     owner: root
     group: wheel
     mode: '0644'
