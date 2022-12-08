@@ -1,6 +1,7 @@
 ---
 - name: Deploy Ansible development server
   hosts: all
+  become: true
 
   vars:
     # username for private automation hub for EE or to password protected registry
