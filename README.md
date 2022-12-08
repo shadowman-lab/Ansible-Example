@@ -1,2 +1,2 @@
 # Ansible-Development
-Repo to sync create an Ansible development server
+Repo to create an Ansible development server
