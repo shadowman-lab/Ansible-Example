@@ -1,7 +1,0 @@
-include README.md
-include *.yml
-include .config/ansible-lint.yml
-include .github/workflows/ansible-lint.yml
-recursive-exclude .git *
-recursive-include collections *.yml
-recursive-include roles *
