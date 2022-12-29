@@ -153,8 +153,8 @@
   become_user: "{{ username }}"
   containers.podman.podman_image:
     name: "{{ ansible_image }}"
-    username: "{{ pah_user }}"
-    password: "{{ pah_pass }}"
+    username: "{{ registry_user }}"
+    password: "{{ registry_pass }}"
 
 - name: Open up correct port
   ansible.posix.firewalld:

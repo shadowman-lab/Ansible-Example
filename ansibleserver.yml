@@ -5,9 +5,9 @@
 
   vars:
     # username for private automation hub for EE or to password protected registry
-    pah_user: "USERNAME"
+    registry_user: "USERNAME"
     # password for private automation hub for EE or to password protected registry
-    pah_pass: "PASSWORD"
+    registry_pass: "PASSWORD"
     # username for development server
     username: "ansible"
     # port for web server access
