@@ -22,4 +22,4 @@
     ansible_image: "registry.redhat.io/ansible-automation-platform-23/ee-supported-rhel8:latest"
 
   roles:
-    - shadowman_dev_server
+    - shadowman_dev_server_builtin
